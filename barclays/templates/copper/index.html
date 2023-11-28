@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+{%if prd_list%}
+<table border="1" align="center" margin="auto">
+  <tr>
+    <th> prd name </th>
+    <th> prd qnty </th>
+    <th> prd validity </th>
+      <th> prd validity </th>
+  </tr>
+  <tr>
+      {%for prd in prd_list %}
+    <td> {{prd.prd_name}} </td>
+    <td> {{prd.prd_qnty}} </td>
+    <td> {{prd.prd_validity}} </td>
+      <td> {{prd.prd_valid_upto}} </td>
+  </tr>
+{%endfor%}
+</table>
+{%else%}
+<h1>No data found</h1>
+
+{%endif%}
+
+</body>
+</html>
